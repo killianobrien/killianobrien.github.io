@@ -7,7 +7,7 @@
 }
 
 .deck-container .slide h1, .deck-container .slide h2, .deck-container .slide h3, .deck-container .slide h4, .deck-container .slide h5, .deck-container .slide h6 {
-  color: orange;
+  color:orange;
   font-family: 'Droid Sans', sans-serif;
 }
 .deck-container .slide{color: rgb(255,255,255)}
