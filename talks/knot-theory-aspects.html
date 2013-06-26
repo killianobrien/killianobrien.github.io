@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>knot-theory-aspects</title>
+	
+	<meta name="description" content="A jQuery library for modern HTML presentations">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../core/deck.core.css">
+	<link rel="stylesheet" href="../extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../extensions/hash/deck.hash.css">
+	
+	<!-- Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	<!-- Theme CSS files (menu swaps these out) -->
+	<link rel="stylesheet" href="../themes/style/kob.css"> 
+	<link rel="stylesheet" id="transition-theme-link" href="../themes/transition/fade.css">
+	
+	<!-- Custom CSS just for this page -->
+	<link rel="stylesheet" href="introduction.css">
+
+	<!-- MathJax -->
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+	<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+	<!-- Sage cells 
+	<script src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="http://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+
+<link rel="stylesheet" type="text/css" href="../extensions/sagecell/sagecell_embed.css"> -->
+	
+	<script src="../modernizr.custom.js"></script> 
+</head>
+
+<body class="deck-container">
+
+<div class="slide" id="1"><h2>Mathematical knot theory</h2>
+<p>Plan</p>
+<ul>
+<li>Show some aspects of mathematical knot theory that hopefully <em>appeal</em> to others.</li>
+<li>Locate where my own work in mathematical knot theory resides. </li>
+</ul>
+</div><div class="slide" id="2"><h2>Equivalence of knots</h2>
+<ul>
+<li>A (mathematical) knot is an embedding of a simple closed loop into three-dimensional space.</li>
+</ul>
+<p><a href="http://katlas.math.toronto.edu/wiki/5_2"><img alt="a knot" src="http://katlas.math.toronto.edu/w/images/thumb/d/dd/5_2.gif/80px-5_2.gif" title="5_2" /></a></p>
+<ul>
+<li>Two knots are <em>equivalent</em> if one can be transformed into the other without cutting the loop.</li>
+<li>A fundamental problem then is to have a way to decide whether two given knots are equivalent, or not.</li>
+<li>
+<p>These two are equivalent ...</p>
+<p><a href="http://torus.math.uiuc.edu/jms/Videos/ke/images.html"><img alt="The Perko pair" src="http://torus.math.uiuc.edu/jms/Videos/ke/perk-180.jpeg" /></a></p>
+<p>but these two are not equivalent</p>
+<p><a href="http://katlas.math.toronto.edu/wiki/10_1"><img alt="10_1" src="http://katlas.math.toronto.edu/w/images/thumb/1/13/10_1.gif/80px-10_1.gif" title="10_1" /></a> <a href="http://katlas.math.toronto.edu/wiki/10_61"><img alt="10_6" src="http://katlas.math.toronto.edu/w/images/thumb/2/20/10_6.gif/80px-10_6.gif" title="10_6" /></a></p>
+</li>
+</ul>
+</div><div class="slide" id="3"><h2>Knot invariants</h2>
+<ul>
+<li>There is no known single algorithm that can decide whether any two knots are equivalent. </li>
+<li>So knot classification seems to be a very hard problem. Which is <em>good</em>.</li>
+<li>Knot theorists develop mathematical tools, called <em>invariants</em>, that are partially succesful at this.</li>
+<li>Given a knot diagram, an invariant produces a number, polynomial or some other mathematical object. If these values are different, then the pair of knot diagrams are not equivalent. But if the values are the same, then no conclusion is reached.</li>
+<li>Any particular invariant can detect inequivalence for some pairs of knot diagrams, but not for others. </li>
+</ul>
+</div><div class="slide" id="4"><h2>The table of knots</h2>
+<ul>
+<li>Generate all possible knot diagrams with a fixed number of crossings.</li>
+<li>Use various procedures for eliminating duplicates, diagrams that are equivalent to knots with fewer crossings, knots which decompose as a sum of two or more simpler knots.</li>
+<li>Left with a set of diagrams which are candidates for all the knot types of that crossing number. </li>
+<li>Use all the invariants at your disposal and other <em>ad hoc</em> methods to confirm that the resulting diagrams represent inequivalent knots.</li>
+<li>So far the prime knots to 14 crossings have been tabulated.</li>
+<li>See the <a href="http://katlas.math.toronto.edu/wiki/The_Rolfsen_Knot_Table">table of knots of zero to ten crossings</a></li>
+</ul>
+</div><div class="slide" id="5"><h2>The Alexander invariants</h2>
+<ul>
+<li>Every knot is the boundary of a two-dimensional <em>Seifert surface</em>.
+<a href="http://www.computer.org/csdl/trans/tg/2006/04/v0485-abs.html"><img alt="Seifert surfaces" src="http://doi.ieeecomputersociety.org/cms/Computer.org/dl/trans/tg/2006/04/figures/v048525.gif" /></a></li>
+<li>The space around the knot (<em>complement of the knot</em>) is cut open along the Seifert surface, and an infinite number of copies of this cut-open complement are glued together along the exposed Seifert surfaces to produce the <em>infinite cyclic cover of the knot complement</em>. </li>
+<li>This covering space is analyzed by considering the space of all possible loops we can embed in it.</li>
+<li>This space of loops leads to an algebraic mathematical object called the <em>Alexander module</em>.</li>
+<li>My <a href="../pdf/thesis.pdf">PhD work</a> concerned algorithms that solved the decision problem for associated objects, called the <em>Alexander ideals</em>.</li>
+</ul>
+</div><div class="slide" id="6"><h2>The fundamental group</h2>
+<ul>
+<li>Many mathematical spaces (including knot complements) are studied by consider the collection of all the possible ways of embedding a loop into the space.</li>
+<li>This collection of loops leads to an object called the <em>fundamental group</em>.</li>
+<li>See slide 9 of <a href="https://www.dropbox.com/s/b85codgq6nwjkmb/so3-talk.pdf">this presentation</a></li>
+</ul>
+</div>
+
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="number" name="slidenum" id="goto-slide">
+	<input type="submit" value="Go">
+</form>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+<script>window.jQuery</script>
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+<script src="../extensions/hash/deck.hash.js"></script>
+
+<script type="text/javascript">
+$(function() {
+	// Deck initialization
+	$.deck('.slide');
+	
+	$('#style-themes').change(function() {
+		$('#style-theme-link').attr('href', $(this).val());
+	});
+	
+	$('#transition-themes').change(function() {
+		$('#transition-theme-link').attr('href', $(this).val());
+	});
+
+    $('pre').click(function (){
+	$(this).toggleClass('highlighted');
+    });
+});
+</script>
+
+</body>
+</html>
