@@ -1,101 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Killian's place, ">
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="/theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
 
-        <link rel="alternate"  href="/feeds/all.atom.xml" type="application/atom+xml" title="Killian's place Full Atom Feed"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Killian O'Brien">
+  <meta name="description" content="Posts and writings by Killian O'Brien">
 
-        <title>Killian O'Brien author // Killian's place // </title>
+  <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Killian's place Atom" />
 
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/theme/css/pure.css">
+  <title>
+    Killian's place
+&ndash; Posts by: Killian O'Brien  </title>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="pure-g-r" id="layout">
-        <div class="sidebar pure-u">
-            <div class="cover-img" style="background-image: url('')">
-                <div class="cover-body">
-                    <header class="header">
-                        <hgroup>
-                            <h1 class="brand-main"><a href="">Killian's place</a></h1>
-                            <p class="tagline"></p>
-                                <p class="social">
-                                    <a href="#">
-                                        <i class="fa fa-You can add links in your config file fa-3x"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fa fa-Another social link fa-3x"></i>
-                                    </a>
-                                </p>
-                        </hgroup>
-                    </header>
-                </div>
-            </div>
-        </div>
-    <div class="pure-u">
-        <div class="content">
-            <!-- A wrapper for all the blog posts -->
-            <div class="posts">
-                <h1 class="content-subhead">
-Posts by 'Killian O'Brien'                </h1>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="/my-super-post.html">My super title</a></h3>
-                            <p class="post-meta"><p>Short version for index and feeds</p></p>
-                            <p class="post-meta">
-                                in <a href="/category/testing.html">Testing</a> &middot; Mon 06 April 2015
-                            </p>
-                        </header>
-                    </section>
-<div class="pagination-wrapper content-subhead">
-    <div class="pagination">
-        <div class="pagination-left">
-                &nbsp;
-        </div>
-        <span>Page 1 / 1</span>
-        <div class="pagination-right">
-        </div>
+  <aside>
+    <div id="user_meta">
+      <a href="">
+        <img src="/theme/images/logo.png" alt="logo">
+      </a>
+      <h2><a href="">Killian O'Brien</a></h2>
+      <p></p>
+      <ul>
+        <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+        <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+        <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+        <li><a href="#" target="_blank">You can modify those links in your config file</a></li>
+        <li><a href="#" target="_blank">You can add links in your config file</a></li>
+        <li><a href="#" target="_blank">Another social link</a></li>
+      </ul>
     </div>
-</div><footer class="footer">
-    <p>&copy; Killian O'Brien &ndash;
-        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
-        for <a href="http://blog.getpelican.com/">Pelican</a>
-    </p>
-</footer>            </div>
-        </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href="">Index</a> &brvbar; <a href="/archives.html">Archives</a>
+      &brvbar; <a href="/feeds/all.atom.xml">Atom</a>
+&gt; Author: Killian O'Brien
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="/my-super-post.html">My super title</a></h3>
+  </div>
+  <div class="article_text">
+    <p>Short version for index and feeds</p>
+  </div>
+</article>
+
+<footer>
+<div id="paginator">
+
+</div>
+</footer>
+
+    <div id="ending_message">
+      <p>&copy; Killian O'Brien. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
     </div>
-    </div>
-    <script>
-        var $top = $('.go-top');
-
-        // Show or hide the sticky footer button
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 200) {
-                $top.fadeIn(200);
-            } else {
-                $top.fadeOut(200);
-            }
-        });
-
-        // Animate the scroll to top
-        $top.click(function(event) {
-            event.preventDefault();
-            $('html, body').animate({scrollTop: 0}, 300);
-        })
-
-        // Makes sure that the href="#" attached to the <a> elements
-        // don't scroll you back up the page.
-        $('body').on('click', 'a[href="#"]', function(event) {
-            event.preventDefault();
-        });
-    </script>
-
+  </main>
 </body>
 </html>
